@@ -1,0 +1,4 @@
+ALTER TABLE assignment
+ADD CONSTRAINT fk_assignment_employee
+FOREIGN KEY (employeeid)
+REFERENCES employee(employeeid);
