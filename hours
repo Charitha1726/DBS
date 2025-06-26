@@ -1,0 +1,3 @@
+ALTER TABLE assignment
+ADD CONSTRAINT chk_hoursworked_nonnegative
+CHECK (hoursworked >= 0);
