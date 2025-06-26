@@ -1,0 +1,12 @@
+CREATE TABLE leaves (
+    leaveid INT PRIMARY KEY, 
+    employeeid INT, 
+    startdate DATE, 
+    enddate DATE, 
+    leavetype VARCHAR(20) CHECK (leavetype IN ('sick', 'casual', 'maternity')), 
+    status VARCHAR(20) CHECK (status IN ('pending', 'approved', 'rejected')),
+    CONSTRAINT fk_employee
+      FOREIGN KEY (employeeid) 
+      REFERENCES employee(employeeid) 
+); 
+
